@@ -29,5 +29,5 @@ The package introduces two simple enums: `EColour` and `EEffect`.
     colour = EColour.CYAN
     effect = EEffect.ITALIC
 
-    cprint(text, colour, effect)  # This will print the specified text in green and italic.
+    cprint(text, colour, effect)  # This will print the specified text in cyan and italic.
 ```
