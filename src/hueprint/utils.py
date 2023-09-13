@@ -10,7 +10,6 @@ def _format_text(text: Union[str, Any], colour: EColour = None, effect: EEffect 
 	:param effect: The text effect to use when printing.
 	:return: The input string with the relevant colour and effect flags added.
 	"""
-	# A User Sequences/Collections should provide its `data` property for printing.
 	to_print: str = text.__str__()
 	if isinstance(colour, EColour):
 		to_print = colour.value + to_print
