@@ -22,7 +22,7 @@ def sprint(text: Union[str, Any]) -> None:
 	The colour used is `EColour.LIGHT_GREEN`.
 	:param text: The text to print. If the argument is not of type `str`, the object will be converted to a string via a `__str__` call.
 	"""
-	print(EColour.LIGHT_GREEN.value + text + EColour.NONE.value)
+	print(_format_text(text, EColour.LIGHT_GREEN))
 
 
 def nprint(text: Union[str, Any]) -> None:
@@ -31,7 +31,7 @@ def nprint(text: Union[str, Any]) -> None:
 	The colour used is `EColour.LIGHT_BLUE`.
 	:param text: The text to print. If the argument is not of type `str`, the object will be converted to a string via a `__str__` call.
 	"""
-	print(EColour.LIGHT_BLUE.value + text + EColour.NONE.value)
+	print(_format_text(text, EColour.LIGHT_BLUE))
 
 
 def wprint(text: Union[str, Any]) -> None:
@@ -40,7 +40,7 @@ def wprint(text: Union[str, Any]) -> None:
 	The colour used is `EColour.YELLOW`.
 	:param text: The text to print. If the argument is not of type `str`, the object will be converted to a string via a `__str__` call.
 	"""
-	print(EColour.YELLOW.value + text + EColour.NONE.value)
+	print(_format_text(text, EColour.YELLOW))
 
 
 def eprint(text: Union[str, Any]) -> None:
@@ -49,10 +49,10 @@ def eprint(text: Union[str, Any]) -> None:
 	The colour used is `EColour.LIGHT_RED`.
 	:param text: The text to print. If the argument is not of type `str`, the object will be converted to a string via a `__str__` call.
 	"""
-	print(EColour.LIGHT_RED.value + text + EColour.NONE.value)
+	print(_format_text(text, EColour.LIGHT_RED))
 
 
-def iprint(iterable: Iterable):
+def iprint(iterable: Iterable) -> None:
 	"""
 	Wrapper function to the generic pprint function. Good for printing containers/collections and other iterables.
 	:param iterable: Iterable (generally a collection or container) to print.
